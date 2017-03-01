@@ -24,9 +24,9 @@ var collectData = function (request, callback) {
 var objectId = 1;
 var messages = [
   {
-    text: "hello",
-    username: "Yoyo",
-    objectId: objectId
+    // text: "hello",
+    // username: "Yoyo",
+    // objectId: objectId
   }
 ];
 
@@ -38,7 +38,7 @@ var actions = {
     collectData(request, function(message){
       messages.push(message);
       message.objectId = ++objectId;
-      sendResponse(response, {objectId : 1})
+      sendResponse(response, {objectId : message.onjectId}, 201)
     });
 
   },
